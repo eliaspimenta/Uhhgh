@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GraphScan AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GraphScan AI</h1>
+            <p class="subtitle">Análise profissional de gráficos financeiros</p>
+        </header>
+
+        <button id="cameraBtn" class="btn">📷 Abrir Câmera</button>
+        <button id="uploadBtn" class="btn btn-secondary">📁 Carregar Imagem</button>
+        <input type="file" id="fileInput" accept="image/*" style="display:none">
+
+        <div class="camera-container" id="cameraContainer">
+            <video id="camera" autoplay playsinline></video>
+            <button class="close-btn" id="closeCamera">✕</button>
+            <div class="camera-controls">
+                <button class="capture-btn" id="captureBtn"></button>
+            </div>
+        </div>
+
+        <div class="preview-container" id="previewContainer">
+            <img id="previewImage" alt="Pré-visualização">
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div id="analysisResult">
+                <!-- Resultado será inserido aqui -->
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="priceChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
